@@ -4,6 +4,15 @@ app=Tk()
 app.title("welcome")
 app.geometry("600x500")
 
+count=0
+def next():
+    t=[2,5,9,7,6,3]
+    for i in range(len(t)):
+        if (i==i):
+            print(t[i])
+        
+    
+
 def ouvrirste():
     #========== label =============
     lbl_code=Label(text="code Ste").grid(row=0,column=0)
@@ -22,11 +31,16 @@ def creerste():
    lbl_codeSte.grid(row=3,column=0)
 
    #=============Entrys ============================
-   nomSte= Entry().grid(row=0,column=1)
-   activiteSte=Entry().grid(row=1,column=1)
-   iceSte=Entry().grid(row=2,column=1)
-   codeSte=Entry().grid(row=3,column=1)
-   btnCreate=Button(text="create").grid(row=4,column=1)
+   nomSte= Entry()
+   nomSte.grid(row=0,column=1)
+   activiteSte=Entry()
+   activiteSte.grid(row=1,column=1)
+   iceSte=Entry()
+   iceSte.grid(row=2,column=1)
+   codeSte=Entry()
+   codeSte.grid(row=3,column=1)
+   btnCreate=Button(text="create",command=next)
+   btnCreate.grid(row=4,column=1)
    
 #===================== button =====================================
 creer=Button(app,text="creer ste ou pp",command=creerste).grid(row=10,column=3)
